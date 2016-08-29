@@ -271,6 +271,10 @@ public class PageStateLayout extends FrameLayout implements PageStateListener {
      * @param succeedView
      */
     public void load(@NonNull View succeedView) {
+        if (null != mSucceedView) {
+            removeView(mSucceedView);
+        }
+        mSucceedView = succeedView;
         addView(mSucceedView, 0);
     }
 
